@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ram Sasidhar Putcha — final-year M.Tech CS student at VIT Chennai building ML, computer vision, IoT, and real-time analytics systems. IEEE ICCCNT 2025 published." />
+  <meta name="theme-color" content="#07090f" />
+  <title>Ram Sasidhar Putcha — ML / CV / IoT Engineer</title>
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ram Sasidhar Putcha — ML / CV / IoT Engineer" />
+  <meta property="og:description" content="Final-year M.Tech CS @ VIT Chennai building real-time ML, computer vision, and IoT systems. IEEE ICCCNT 2025 published." />
+  <meta property="og:image" content="og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ram Sasidhar Putcha — ML / CV / IoT Engineer" />
+  <meta name="twitter:description" content="Final-year M.Tech CS @ VIT Chennai building real-time ML, computer vision, and IoT systems." />
+
+  <!-- Inline SVG favicon (RS monogram, gradient) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%23a78bfa'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='68' font-family='monospace' font-size='52' font-weight='700' text-anchor='middle' fill='%2307090f'%3ERS%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Boot sequence overlay -->
+  <div id="boot" class="boot">
+    <pre id="boot-text" class="boot-text"></pre>
+  </div>
+
+  <!-- Neural-net canvas background -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="#top" class="nav-brand">
+      <span class="nav-brand-mark">RS</span>
+      <span class="nav-brand-name">ram.sasidhar</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">about</a></li>
+      <li><a href="#experience">experience</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#repos">repos</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a class="nav-resume-btn" href="ResumeUpdated.pdf" target="_blank" rel="noopener">résumé</a>
+      <button class="nav-terminal-btn" id="open-terminal" aria-label="Open terminal">
+        <span aria-hidden="true">›_</span>
+      </button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-status">
+            <span class="status-dot"></span>
+            <span class="status-text">AI intern @ AyuhTech · open to roles from 2027</span>
+          </div>
+          <h1 class="hero-title">
+            <span class="hero-line">Ram Sasidhar</span>
+            <span class="hero-line hero-line-accent">Putcha</span>
+          </h1>
+          <p class="hero-tagline">
+            <span id="typed"></span><span class="cursor">▌</span>
+          </p>
+          <p class="hero-sub">
+            Final-year M.Tech CS student at VIT Chennai building computer vision,
+            embedded IoT, and real-time analytics systems. Currently an AI intern
+            at AyuhTech. Published at IEEE ICCCNT 2025.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              <span>view projects</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="ResumeUpdated.pdf" target="_blank" rel="noopener" class="btn btn-ghost">
+              <span>résumé</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-ghost">get in touch</a>
+            <button class="btn btn-ghost" id="hint-terminal">
+              <span>try the terminal</span>
+              <kbd>`</kbd>
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-hidden="true">
+          <div class="hero-card-header">
+            <span class="dot dot-r"></span>
+            <span class="dot dot-y"></span>
+            <span class="dot dot-g"></span>
+            <span class="hero-card-title">system.status</span>
+          </div>
+          <div class="hero-card-body">
+<pre><span class="c-mute">~ $</span> <span class="c-pri">whoami</span>
+<span class="c-acc">ram.sasidhar</span>
+
+<span class="c-mute">~ $</span> <span class="c-pri">cat profile.json</span>
+{
+  <span class="c-acc">"role"</span>: <span class="c-str">"M.Tech CS (final yr)"</span>,
+  <span class="c-acc">"born"</span>: <span class="c-str">"Detroit, MI, USA"</span>,
+  <span class="c-acc">"based"</span>: <span class="c-str">"Chennai, IN"</span>,
+  <span class="c-acc">"cgpa"</span>: <span class="c-num">8.60</span>,
+  <span class="c-acc">"focus"</span>: [<span class="c-str">"ML"</span>, <span class="c-str">"CV"</span>, <span class="c-str">"IoT"</span>, <span class="c-str">"analytics"</span>],
+  <span class="c-acc">"shipping"</span>: <span class="c-str">"real systems"</span>
+}
+
+<span class="c-mute">~ $</span> <span class="c-pri">uptime</span>
+building &amp; learning, every day</pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll">
+        <div class="scroll-line"></div>
+        <span>scroll</span>
+      </div>
+    </section>
+
+    <!-- ABOUT / STATS -->
+    <section id="about" class="section">
+      <header class="section-head">
+        <span class="section-num">01</span>
+        <h2 class="section-title">snapshot</h2>
+        <div class="section-rule"></div>
+      </header>
+
+      <div class="stats">
+        <div class="stat" data-target="91" data-suffix="%">
+          <div class="stat-num"><span class="counter">0</span><span class="stat-suffix">%</span></div>
+          <div class="stat-label">PPE detection accuracy</div>
+          <div class="stat-meta">YOLOv8 · live gate surveillance</div>
+        </div>
+        <div class="stat" data-target="500" data-suffix="+">
+          <div class="stat-num"><span class="counter">0</span><span class="stat-suffix">+</span></div>
+          <div class="stat-label">invoices processed</div>
+          <div class="stat-meta">Doc AI · 50% → 85% accuracy</div>
+        </div>
+        <div class="stat" data-target="4" data-suffix="">
+          <div class="stat-num"><span class="counter">0</span><span class="stat-suffix"></span></div>
+          <div class="stat-label">industry internships</div>
+          <div class="stat-meta">AyuhTech · RINL · 3F · Winfo</div>
+        </div>
+        <div class="stat" data-target="1" data-suffix="">
+          <div class="stat-num"><span class="counter">0</span><span class="stat-suffix"></span></div>
+          <div class="stat-label">IEEE publication</div>
+          <div class="stat-meta">ICCCNT 2025 · accepted</div>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>what I'm into</h3>
+          <p>
+            Systems that <em>have to work in the real world</em> — vision models that
+            run on a factory gate, embedded sensors that wake up when something moves,
+            telemetry pipelines that keep flowing when the network doesn't. Born in
+            <em>Detroit, Michigan</em>, now building out of Chennai.
+          </p>
+        </div>
+        <div class="about-card">
+          <h3>currently</h3>
+          <p>
+            Final-year integrated M.Tech CS at VIT Chennai (Business Analytics focus,
+            graduating 2027). AI intern at <em>AyuhTech</em>, building a Southern
+            Railways tracking app for their Kavach rollout. Recent paper accepted at
+            the 16th IEEE ICCCNT.
+          </p>
+        </div>
+        <div class="about-card">
+          <h3>how I work</h3>
+          <p>
+            Ship the smallest thing that does the job, then sharpen it. Comfortable
+            owning a problem end-to-end — data collection, model, embedded firmware,
+            cloud sync, and the dashboard someone actually opens.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <header class="section-head">
+        <span class="section-num">02</span>
+        <h2 class="section-title">experience</h2>
+        <div class="section-rule"></div>
+      </header>
+
+      <ol class="timeline">
+
+        <li class="tl-item">
+          <div class="tl-marker tl-marker-live"></div>
+          <div class="tl-card">
+            <div class="tl-meta">
+              <span class="tl-date">May 2025 — present</span>
+              <span class="tl-tag tl-tag-hot">current</span>
+            </div>
+            <h3 class="tl-role">AI Intern</h3>
+            <p class="tl-company">AyuhTech</p>
+            <ul class="tl-points">
+              <li>Building a real-time tracking application for <strong>Southern Railways</strong> as part of their <strong>Kavach</strong> collision-avoidance rollout.</li>
+              <li>Full-stack delivery on a modern <strong>Next.js / TypeScript / React</strong> stack with <strong>MongoDB Atlas</strong>.</li>
+            </ul>
+            <div class="tl-stack">
+              <span>Next.js</span><span>TypeScript</span><span>React</span><span>Tailwind CSS</span><span>MongoDB Atlas</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="tl-item">
+          <div class="tl-marker"></div>
+          <div class="tl-card">
+            <div class="tl-meta">
+              <span class="tl-date">Jun 2025 — Jul 2025</span>
+            </div>
+            <h3 class="tl-role">Machine Learning Intern</h3>
+            <p class="tl-company">Vizag Steel Plant — RINL, Visakhapatnam</p>
+            <ul class="tl-points">
+              <li>Designed and deployed a PPE detection system on live gate surveillance using <strong>YOLOv8, Python, OpenCV</strong>.</li>
+              <li>Wired the inference pipeline into a <strong>Node.js</strong> backend with <strong>Firebase</strong> for real-time compliance monitoring.</li>
+              <li>Hit <strong>91% detection accuracy</strong> and shipped automated safety reporting.</li>
+              <li>Delivered the production-ready solution solo — received a Letter of Recommendation.</li>
+            </ul>
+            <div class="tl-stack">
+              <span>YOLOv8</span><span>OpenCV</span><span>Python</span><span>Node.js</span><span>Firebase</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="tl-item">
+          <div class="tl-marker"></div>
+          <div class="tl-card">
+            <div class="tl-meta">
+              <span class="tl-date">Jul 2024 — Oct 2024</span>
+            </div>
+            <h3 class="tl-role">UI/UX Design Intern</h3>
+            <p class="tl-company">3F · Virtual</p>
+            <ul class="tl-points">
+              <li>Designed and prototyped mobile interfaces in <strong>Figma</strong>, iterating with usability testing.</li>
+              <li>Integrated AI-generated assets to speed up design workflows.</li>
+              <li>Optimized data conversion pipelines for smoother cross-team handoff.</li>
+            </ul>
+            <div class="tl-stack">
+              <span>Figma</span><span>Prototyping</span><span>AI assets</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="tl-item">
+          <div class="tl-marker"></div>
+          <div class="tl-card">
+            <div class="tl-meta">
+              <span class="tl-date">May 2024 — Jul 2024</span>
+            </div>
+            <h3 class="tl-role">AI / ML Intern</h3>
+            <p class="tl-company">Winfo Solutions Pvt Ltd, Hyderabad</p>
+            <ul class="tl-points">
+              <li>Curated and processed <strong>500+ invoice documents</strong> for model training.</li>
+              <li>Pushed extraction accuracy from <strong>50% to 85%</strong> using <strong>Google Cloud Document AI</strong>.</li>
+              <li>Wrote preprocessing and validation routines that hardened the model on messy real-world inputs.</li>
+            </ul>
+            <div class="tl-stack">
+              <span>Document AI</span><span>GCP</span><span>Python</span>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <header class="section-head">
+        <span class="section-num">03</span>
+        <h2 class="section-title">featured projects</h2>
+        <div class="section-rule"></div>
+      </header>
+
+      <div class="proj-grid">
+
+        <article class="proj-card" data-tilt>
+          <div class="proj-card-inner">
+            <div class="proj-badge proj-badge-ieee">IEEE ICCCNT 2025 · accepted</div>
+            <h3>Multi-Modal Road Condition Monitoring</h3>
+            <p class="proj-sub">Dashcam imagery · IMU · geospatial event detection</p>
+            <p>
+              Real-time monitoring framework that fuses computer vision with inertial sensing
+              to flag road anomalies. Built an Android-based crowdsourced collector that
+              continuously streams sensor + geo-tagged data to Firebase. IMU-based jerk
+              analysis sharpens detection reliability for large-scale safety analytics.
+            </p>
+            <div class="proj-stack">
+              <span>Computer Vision</span><span>IMU Fusion</span><span>Android</span><span>Firebase</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card" data-tilt>
+          <div class="proj-card-inner">
+            <div class="proj-badge proj-badge-hw">Embedded · IoT</div>
+            <h3>IoT Smart Safety Helmet</h3>
+            <p class="proj-sub">Wear detection · fall monitoring · ESP-NOW</p>
+            <p>
+              Embedded safety system fusing capacitive, proximity, and IMU sensors for
+              wear-state verification and motion analysis. Interrupt-driven firmware
+              tracks orientation and detects falls under dynamic conditions. Uses low-power
+              <strong>ESP-NOW</strong> peer-to-peer comms for reliable alerts in
+              infrastructure-constrained environments.
+            </p>
+            <div class="proj-stack">
+              <span>ESP32</span><span>IMU</span><span>ESP-NOW</span><span>Edge logic</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card" data-tilt>
+          <div class="proj-card-inner">
+            <div class="proj-badge proj-badge-ml">LLM · Streaming</div>
+            <h3>Live YouTube Comment Emotion Analysis</h3>
+            <p class="proj-sub">Streaming analytics powered by LLMs</p>
+            <p>
+              Streaming data analytics pipeline integrating APIs and large language
+              models for continuous inference on live comment streams. Latency and
+              processing workflows tuned for scalable real-time analytics and
+              visualization on top of the inference output.
+            </p>
+            <div class="proj-stack">
+              <span>LLMs</span><span>Streaming</span><span>APIs</span><span>Real-time viz</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card" data-tilt>
+          <div class="proj-card-inner">
+            <div class="proj-badge proj-badge-hw">Connected Vehicle</div>
+            <h3>Intelligent OBD Vehicle Tracker</h3>
+            <p class="proj-sub">Connected diagnostics · real-time telemetry</p>
+            <p>
+              Connected diagnostics platform that talks to a vehicle ECU over a
+              Bluetooth OBD-II module for live telemetry. Real-time sensor streaming
+              and lifecycle monitoring feed predictive-maintenance analysis.
+              Offline-capable mobile architecture with synced cloud storage keeps
+              it reliable on bad connections.
+            </p>
+            <div class="proj-stack">
+              <span>OBD-II</span><span>Bluetooth</span><span>Mobile</span><span>Cloud sync</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card" data-tilt>
+          <div class="proj-card-inner">
+            <div class="proj-badge proj-badge-ml">Production ML</div>
+            <h3>RINL PPE Detection (Production)</h3>
+            <p class="proj-sub">YOLOv8 · live gate surveillance · 91% accuracy</p>
+            <p>
+              End-to-end PPE compliance system deployed at Vizag Steel Plant gate cameras.
+              YOLOv8 inference pipeline wired to a Node.js backend with Firebase for
+              real-time compliance dashboards and automated safety reporting.
+              Delivered as a production-ready solution.
+            </p>
+            <div class="proj-stack">
+              <span>YOLOv8</span><span>OpenCV</span><span>Node.js</span><span>Firebase</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <header class="section-head">
+        <span class="section-num">04</span>
+        <h2 class="section-title">skills matrix</h2>
+        <div class="section-rule"></div>
+      </header>
+
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>languages</h3>
+          <div class="skill-tags">
+            <span>Python</span><span>C</span><span>C++</span><span>Java</span>
+            <span>JavaScript</span><span>TypeScript</span><span>SQL</span><span>Bash</span><span>R</span>
+            <span>HTML</span><span>CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>ML / data</h3>
+          <div class="skill-tags">
+            <span>PyTorch</span><span>TensorFlow</span><span>Keras</span>
+            <span>Scikit-learn</span><span>OpenCV</span><span>YOLOv8</span>
+            <span>Pandas</span><span>NumPy</span><span>Streamlit</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>web</h3>
+          <div class="skill-tags">
+            <span>React</span><span>Next.js</span><span>Tailwind CSS</span>
+            <span>Node.js</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>data &amp; cloud</h3>
+          <div class="skill-tags">
+            <span>MySQL</span><span>Neo4j</span><span>MongoDB Atlas</span><span>Firebase</span>
+            <span>Google Cloud Document AI</span><span>Databricks</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>embedded / tools</h3>
+          <div class="skill-tags">
+            <span>Arduino</span><span>ESP32</span><span>ESP-NOW</span>
+            <span>Git</span><span>Figma</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>viz</h3>
+          <div class="skill-tags">
+            <span>Power BI</span><span>Tableau</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>concepts</h3>
+          <div class="skill-tags">
+            <span>Computer Vision</span><span>Deep Learning</span><span>NLP</span>
+            <span>EDA</span><span>Transfer Learning</span><span>Embedded IoT</span>
+            <span>Business Analytics</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REPOS -->
+    <section id="repos" class="section">
+      <header class="section-head">
+        <span class="section-num">05</span>
+        <h2 class="section-title">github</h2>
+        <div class="section-rule"></div>
+      </header>
+      <p class="section-lede">
+        Public repos · live from
+        <a href="https://github.com/ram-sasidhar" target="_blank" rel="noopener">@ram-sasidhar</a>.
+        Most production work lives in private / academic repos and is summarized in the projects section above.
+      </p>
+      <div id="repo-grid" class="repo-grid">
+        <div class="repo-card repo-skeleton"></div>
+        <div class="repo-card repo-skeleton"></div>
+        <div class="repo-card repo-skeleton"></div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & CERTS -->
+    <section id="education" class="section">
+      <header class="section-head">
+        <span class="section-num">06</span>
+        <h2 class="section-title">education &amp; certs</h2>
+        <div class="section-rule"></div>
+      </header>
+
+      <div class="edu-grid">
+        <div class="edu-card edu-card-primary">
+          <div class="edu-period">2022 — 2027</div>
+          <h3>Integrated M.Tech, Computer Science &amp; Engineering</h3>
+          <p class="edu-school">Vellore Institute of Technology, Chennai · Business Analytics focus</p>
+          <div class="edu-meta">
+            <span class="edu-pill">CGPA <strong>8.60 / 10</strong></span>
+          </div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-period">2022</div>
+          <h3>Senior Secondary (XII), CBSE</h3>
+          <p class="edu-school">Chettinad Vidyashram, Chennai</p>
+          <div class="edu-meta">
+            <span class="edu-pill">85.20%</span>
+          </div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-period">2020</div>
+          <h3>Secondary (X), CBSE</h3>
+          <p class="edu-school">Hindu Sr Sec School, Indira Nagar, Chennai</p>
+          <div class="edu-meta">
+            <span class="edu-pill">93%</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="subsection-title">certifications</h3>
+      <div class="cert-grid">
+        <div class="cert">
+          <span class="cert-date">Jan — Mar 2025</span>
+          <h4>Programming with JavaScript</h4>
+          <p>Coursera</p>
+        </div>
+        <div class="cert">
+          <span class="cert-date">Dec 2024 — Jan 2025</span>
+          <h4>Introduction to Front-End Development</h4>
+          <p>Meta</p>
+        </div>
+        <div class="cert">
+          <span class="cert-date">Jul — Aug 2024</span>
+          <h4>Quantum Machine Learning</h4>
+          <p>KwantamG Research Labs</p>
+        </div>
+        <div class="cert">
+          <span class="cert-date">May — Oct 2024</span>
+          <h4>Machine Learning A-Z: AI, Python &amp; R</h4>
+          <p>Udemy</p>
+        </div>
+      </div>
+
+      <h3 class="subsection-title">outside the code</h3>
+      <ul class="extra-list">
+        <li>District Youth Coordinator for the Sri Sathya Sai Organization — organized food &amp; clothing donation drives.</li>
+        <li>Award recipient in Karate with advanced belt certifications.</li>
+        <li>Multi-time school-level winner in Bhagavad Gita recitation competitions.</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-contact">
+      <header class="section-head">
+        <span class="section-num">07</span>
+        <h2 class="section-title">say hi</h2>
+        <div class="section-rule"></div>
+      </header>
+
+      <div class="contact-card">
+        <div class="contact-left">
+          <h3>have a role, a project, or just a question?</h3>
+          <p>
+            The fastest way to reach me is email — I read everything and reply.
+            For more casual stuff, LinkedIn or GitHub work too.
+          </p>
+          <a href="mailto:putcharamsasidhar@gmail.com" class="btn btn-primary btn-large">
+            <span>putcharamsasidhar@gmail.com</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg>
+          </a>
+        </div>
+        <div class="contact-right">
+          <a href="mailto:putcharamsasidhar@gmail.com" class="contact-link">
+            <span class="contact-link-label">Email</span>
+            <span class="contact-link-handle">putcharamsasidhar@gmail.com</span>
+          </a>
+          <a href="https://linkedin.com/in/ram-sasidhar" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-link-label">LinkedIn</span>
+            <span class="contact-link-handle">/in/ram-sasidhar</span>
+          </a>
+          <a href="https://github.com/ram-sasidhar" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-link-label">GitHub</span>
+            <span class="contact-link-handle">@ram-sasidhar</span>
+          </a>
+          <div class="contact-link contact-link-static">
+            <span class="contact-link-label">Location</span>
+            <span class="contact-link-handle">Chennai, India · born in Detroit, MI</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-row">
+      <span>© <span id="year"></span> Ram Sasidhar Putcha</span>
+      <span class="footer-mid">built with raw HTML, CSS, and JS · no frameworks harmed</span>
+      <span><kbd>`</kbd> opens the terminal</span>
+    </div>
+  </footer>
+
+  <!-- Interactive terminal -->
+  <div id="terminal" class="terminal" hidden>
+    <div class="term-header">
+      <div class="term-dots">
+        <span class="dot dot-r"></span>
+        <span class="dot dot-y"></span>
+        <span class="dot dot-g"></span>
+      </div>
+      <span class="term-title">ram@portfolio: ~</span>
+      <button id="close-terminal" class="term-close" aria-label="Close terminal">✕</button>
+    </div>
+    <div class="term-body" id="term-body"></div>
+    <form class="term-input-row" id="term-form" autocomplete="off">
+      <span class="term-prompt">guest@ram:~$</span>
+      <input id="term-input" class="term-input" type="text" spellcheck="false" autocapitalize="off" autocorrect="off" />
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
