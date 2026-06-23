@@ -323,7 +323,7 @@
       repoGrid.innerHTML = `
         <div class="repo-card" style="grid-column: 1 / -1;">
           <p class="repo-desc">Couldn't load repos live (${err.message}).
-          See them directly at <a href="https://github.com/ram-sasidhar" target="_blank" rel="noopener" style="color: var(--primary)">github.com/ram-sasidhar</a>.</p>
+          See them directly at <a href="https://github.com/RamSasidhar" target="_blank" rel="noopener" style="color: var(--primary)">github.com/RamSasidhar</a>.</p>
         </div>`;
     }
   }
@@ -539,7 +539,7 @@
     socials() {
       printRaw(`
         <p>LinkedIn · <a href="https://linkedin.com/in/ram-sasidhar" target="_blank" rel="noopener" style="color: var(--primary)">/in/ram-sasidhar</a></p>
-        <p>GitHub   · <a href="https://github.com/ram-sasidhar" target="_blank" rel="noopener" style="color: var(--primary)">@ram-sasidhar</a></p>
+        <p>GitHub   · <a href="https://github.com/RamSasidhar" target="_blank" rel="noopener" style="color: var(--primary)">@RamSasidhar</a></p>
         <p>&nbsp;</p>
       `);
     },

@@ -55,7 +55,7 @@ git init
 git add .
 git commit -m "portfolio site"
 git branch -M main
-git remote add origin https://github.com/ram-sasidhar/portfolio.git
+git remote add origin https://github.com/RamSasidhar/portfolio.git
 git push -u origin main
 ```
 

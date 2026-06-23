@@ -27,7 +27,7 @@ Chennai, India.
 
 - Email: **putcharamsasidhar@gmail.com**
 - Phone: +91 63792 34114
-- GitHub: **github.com/ram-sasidhar**
+- GitHub: **github.com/RamSasidhar**
 - LinkedIn: **linkedin.com/in/ram-sasidhar**
 
 ## Education
